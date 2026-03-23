@@ -1,27 +1,25 @@
-# IoT-RFID-Attendence-system
-IoT-based RFID system using ESP32 that logs user data to Firebase (Realtime DB &amp; Firestore) for attendance and access control.
+Introduction
+An Automatic Toll Collection System (ATCS) eliminates manual toll booths by using RFID technology. Vehicles are equipped with RFID tags, and toll is deducted automatically when they pass through the toll gate.
+This project uses:
+•	ESP32 for processing & WiFi communication
+•	RFID module (MFRC522) for vehicle identification
+•	Firebase for real-time database & cloud storage
 
-This project is an IoT-based RFID attendance and access control system built using ESP32. 
-It reads RFID card data and sends it to Firebase (Realtime Database and Cloud Firestore) 
-for real-time logging and cloud storage.
+ Objective
+•	Automate toll collection
+•	Reduce traffic congestion
+•	Maintain real-time vehicle records
+•	Enable cashless transactions
 
-Features:
-- RFID card detection using MFRC522
-- ESP32 Wi-Fi connectivity
-- Data logging to Firebase Realtime Database
-- Integration with Cloud Firestore using REST API
-- Scalable cloud-based architecture
-- Can be extended for attendance systems or smart access control
-
-Technologies Used:
-- ESP32
-- RFID (MFRC522)
-- Firebase Realtime Database
-- Cloud Firestore
-- HTTP/REST API
-- Arduino IDE
-
-Applications:
-- Smart attendance systems
-- Secure access control
-- IoT-based monitoring systems
+  Working Principle
+1.	Vehicle approaches toll gate
+2.	RFID tag is scanned using MFRC522
+3.	ESP32 reads UID of the tag
+4.	UID is sent to Firebase
+5.	Firebase checks balance
+6.	If balance sufficient:
+o	Deduct toll amount
+o	Gate opens
+7.	If insufficient:
+o	Gate remains closed
+o	Alert generated
